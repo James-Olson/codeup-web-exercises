@@ -55,7 +55,18 @@ console.log
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
-
+function analyzeColor(color){
+    switch (color){
+        case "blue":
+            return "blue is the color of the sky.";
+        case "red":
+            return "Strawberries are red.";
+        case "cyan":
+            return "I don't know anything about cyan.";
+        default:
+            return "I don't know that color.";
+    }
+}
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
@@ -86,6 +97,27 @@ alert(analyzeColor(promptcolor))
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+function calculateTotal(lucky,total){
+    if(lucky === 0){
+        return total;
+    }else if(lucky === 1){
+        return total - (.10 * total);
+    }else if(lucky === 2){
+        return total - (.25 * total);
+    }else if(lucky === 3){
+        return total - (.35 * total);
+    }else if(lucky === 4){
+        return total - (.5 * total);
+    }else if(lucky === 5){
+        return total - (1 * total);
+    }
+}
+console.log(calculateTotal(0, 100))
+console.log(calculateTotal(1, 100))
+console.log(calculateTotal(2, 100))
+console.log(calculateTotal(3, 100))
+console.log(calculateTotal(4, 100))
+console.log(calculateTotal(5, 100))
 
 /**
  * TODO:
@@ -97,6 +129,9 @@ alert(analyzeColor(promptcolor))
  */
 // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
+let luckyNumber = Math.floor(Math.random() * 6);
+let bill = prompt("What was the total for your bill?");
+alert("You lucky number is " + luckyNumber + ". Before discount total $" + bill + ". Your new total is $" + calculateTotal(luckyNumber, bill).toFixed(2) + ".");
 
 /**
  * TODO:
@@ -116,3 +151,26 @@ alert(analyzeColor(promptcolor))
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+confirm("Would you like to enter number?");
+let uInput = Number(prompt("Enter Number."));
+
+if(isNaN(uInput)){
+    alert("invalid entry.");
+}else if(uInput %2 === 0 && !isNaN(uInput)){
+    alert("The Number is even.");
+    alert((uInput) + 100);
+    if(uInput>0){
+        alert("Number is positive.");
+    }else{
+        alert("Number is negative.");
+    }
+}
+else if (uInput %2 !== 0 && !isNaN(uInput)) {
+    alert("The Number is odd.");
+    alert((uInput) + 100);
+    if (uInput > 0) {
+        alert("Number is positive.");
+    } else {
+        alert("Number is negative.");
+    }
+}
