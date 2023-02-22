@@ -54,13 +54,10 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-function istwo(x){
-    if (x===2)
-        return true
-    else
-        return false}
-
-(console.log(istwo(random));
+function istwo(x) {
+    return x === 2;
+}
+console.log(istwo(random));
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -73,9 +70,10 @@ function istwo(x){
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
-function calculateTip(x, y){
-    return (x * y)}
-
+function calculateTip(x,y){
+    return (x * y);
+}
+console.log(calculateTip(x,y));
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
@@ -83,9 +81,9 @@ function calculateTip(x, y){
  * then display the dollar amount they should tip
  */
 
-x=prompt('bill total')
-y=prompt('tip total')
-z=alert()
+var bill = Number(prompt('bill amount'));
+var tip = Number(prompt('tip amount'));
+alert('tip is' + calculateTip(x,y).toFixed(2));
 
 /**
  * TODO:
@@ -101,7 +99,9 @@ z=alert()
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
-function applydiscount(price,discount){
+function applydiscount(price,discount) {
     let sum = price * discount;
-    let sum = price - discountamount;
+    return price - discountamount;
 }
+console.log(applydiscount(45.99, .12).tofixed(2));
+
