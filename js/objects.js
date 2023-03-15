@@ -49,6 +49,24 @@ console.log(person.firstname)
      * and console.log the relevant messages for each person
      */
 
+    let shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+
+
+    shoppers.forEach(function (shopper) {
+        let discountAmount = (shopper.amount * 0.12).toFixed(2);
+        let discountTotal = (shopper.amount - discountAmount).toFixed(2);
+        if (shopper.amount > 200) {
+            console.log(`Hi ${shoppers.name}, your previous total was ${shopper.amount}, but you have a discount of ${discountAmount} to bring you to the grand total of ${discountTotal}`)
+        } else {
+            console.log(`Hi ${shopper.name}, your total is ${shopper.amount}`);
+        }
+    })
+
 
 
 
@@ -64,6 +82,50 @@ console.log(person.firstname)
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    let books = [
+        {
+            Title: "harry potter1",
+            Author:
+                {
+                    firstName: "jk",
+                    lastName: "rolling1"
+                }
+        },
+        {
+            title: "Harry Potter2",
+            author: {
+                firstName: "jk",
+                lastName: "rolling2",
+            }
+        },
+        {
+            title: "harry potter3",
+            author: {
+                firstName: "jk",
+                lastName: "rolling3",
+            }
+        },
+        {
+            title:  "harry potter4",
+            author: {
+                firstName: "jk",
+                lastName: "rolling4",
+            }
+        },
+        {
+            title: "harry potter5",
+            author: {
+                firstName: "jk",
+                lastName: "rolling5",
+            }
+        }
+    ]
+    console.log(books[1].title)
+    console.log(books[1].author.firstName)
+    console.log(books[1].author.lastName)
+
+
 
     /**
      * TODO:
@@ -89,6 +151,16 @@ console.log(person.firstname)
      *      ---
      *      ...
      */
+
+
+    for(let i = 0; i < books.length; i++){
+        console.log("Book # " + i + 1);
+        console.log("Title: " + books[i].title);
+        console.log("Author: " + books[i].author.firstName + " " + books[i].author.lastName);
+        console.log("---")
+    }
+
+
 
     /**
      * Bonus:
