@@ -11,6 +11,11 @@
     text-align:center;
 }
 
-.symb{
+#goodboy{
     text-align:center;
+}
+
+.sym{
+    margin-right:20px;
+    margin-left:20px;
 }
