@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .invisible{
+      visibility: hidden;
+    }
+    #left{
+      background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs1keBY2_EjNXX6k-CLf0aCkBXH5Aof0mmDw&usqp=CAU") ;
+      height: 100px;
+      background-repeat: no-repeat;
+    }
+    #center{
+      background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtlaz4tBxEo21qwF4WBjVv3AEgeSrtlLfkCg&usqp=CAU") ;
+      height: 100px;
+      background-repeat: no-repeat;
+    }
+    #right{
+      background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYd65ULJXSuTSe5HGfJFlGQG8mWh8tg2bPGA&usqp=CAU") ;
+      height: 100px;
+      background-repeat: no-repeat;
+    }
+
+  </style>
+</head>
+<body>
+<p class = 'MainHeading'>Frequently Asked Questions About the National Parks:</p>
+
+<dl>
+  <dt>Who Manages America's National Parks?</dt>
+  <dd class='invisible'>The national parks are managed by the National Park Service (NPS), which also oversees
+    numerous national monuments, historic sites, memorials, historical parks, lakeshores and seashores. The National
+    Park Service itself is a bureau of the Department of the Interior (DOI).
+  </dd>
+
+  <dt>What Is a National Park?</dt>
+  <dd class='invisible'>The National Park Service defines "national parks" as follows: "Generally, a national park
+    contains a variety of resources and encompasses large land or water areas to help provide adequate protection of
+    the resources."
+  </dd>
+
+  <dt>How Old Is America's National Park System?</dt>
+  <dd class='invisible'>Officially, the National Park System dates from August 25, 1916, which is the day President
+    Woodrow Wilson created the National Park Service.
+
+  </dd>
+
+  <dt>How Many National Parks Are There?</dt>
+  <dd class='invisible'>National parks are just one of many designations in the National Park System. In total, there
+    are 423 National Park Service units..
+  </dd>
+
+  <dt>What Does the National Park Service Logo Mean?</dt>
+  <dd class='invisible'>The logo of the National Park Service represents the different aspects of America's National
+    Park System.
+  </dd>
+
+  <dt>How Many People Visit America's National Parks Every Year?</dt>
+  <dd class='invisible'>The most visited national park is Great Smoky Mountains National Park in North Carolina and
+    Tennessee, which welcomed 14.1 million visitors in 2021.
+  </dd>
+
+  <dt>What Is the Least Visited National Park?
+
+  </dt>
+  <dd class='invisible'>The least visited national park is Gates of the Arctic National Park and Preserve in Alaska.
+    No more than 7,362 people journeyed there in 2021.
+  </dd>
+
+  <dt>What Is the Oldest National Park?</dt>
+  <dd class='invisible'>The first national park ever established in the United States, and the entire world, is
+    Yellowstone National Park. It was created by President Ulysses S. Grant on March 1, 1872.
+  </dd>
+
+  <dt>What Is the Youngest National Park?
+
+  </dt>
+  <dd class='invisible'>The largest national park in America is Wrangell-St. Elias National Park and Preserve in
+    southeastern Alaska.
+  </dd>
+
+</dl>
+
+<button id="toggleBtn">toggle data</button>
+
+<h3 id="park1">Yellow Stone National Park</h3>
+<ul id="facts1">
+  <li>Has Trees</li>
+  <li>Has trails</li>
+  <li>Has Geyser</li>
+  <li>Has Rivers</li>
+</ul>
+<h3 id="park2">Everglades</h3>
+<ul id="facts2">
+  <li>Has Gators</li>
+  <li>Has Swamp</li>
+  <li>Has Ogre</li>
+  <li>Has Onions</li>
+</ul>
+<h3 id="park3">Padre Island</h3>
+<ul id="facts3">
+  <li>Has Crabs</li>
+  <li>Has Turtles</li>
+  <li>Has Sand</li>
+  <li>Has Sunburn</li>
+</ul>
+
+<button id="li_highlight">Highlight List Items</button>
+
+<div id="left">
+  <button id="left-button">Left</button>
+</div>
+
+<div id="center">
+  <button id="center-button">Center</button>
+</div>
+
+<div id="right">
+  <button id="right-button">Right</button>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+<script>
+
+
+  $('#toggleBtn').click(function (){
+    $('dd').toggleClass('invisible');
+  })
+
+  $('dt').click(function (){
+    $(this).css('background', 'yellow')
+  })
+
+  $('#li_highlight').click(function(){
+    $('ul').each(function(){
+      $(this).children().last().css('background-color', 'yellow');
+    })
+  })
+
+
+  $('h3').click(function(){
+    $(this).next().css('font-weight', 'bold');
+  })
+
+  $('li').click(function(){
+    $(this).parent().children().first().css('color', 'blue');
+  })
+
+  let left = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs1keBY2_EjNXX6k-CLf0aCkBXH5Aof0mmDw&usqp=CAU"
+  let center = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtlaz4tBxEo21qwF4WBjVv3AEgeSrtlLfkCg&usqp=CAU"
+  let right = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYd65ULJXSuTSe5HGfJFlGQG8mWh8tg2bPGA&usqp=CAU"
+  $(document).ready(function(){
+    $('#left-button').click(function(){
+
+      // left -> right
+      // right -> center
+      // center -> left
+      $('#left').css('background-image', 'url(' + center + ')');
+      $('#center').css('background-image', 'url(' + right + ')');
+      $('#right').css('background-image', 'url(' + left + ')');
+    })
+
+    $('#center-button').click(function(){
+      $('#left').css('background-image', 'url(' + center + ')');
+      $('#center').css('background-image', 'url(' + right + ')');
+      $('#right').css('background-image', 'url(' + left + ')');
+
+    })
+
+    $('#right-button').click(function(){
+      $('#left').css('background-image', 'url(' + right + ')');
+      $('#center').css('background-image', 'url(' + left + ')');
+      $('#right').css('background-image', 'url(' + center + ')');
+
+    })
+  })
+
+
+
+
+</script>
+</body>
+</html>
