@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,9 +11,43 @@
 </head>
 <body>
 
+<h1 id="header">jQuery selector exercise</h1>
+<h1>Exercise complete</h1>
 
-<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
-        crossorigin="anonymous"></script>
+<div>
+    <ul>
+        <li class="codeup">dog</li>
+        <li class="codeup">cat</li>
+        <li class="codeup">fish</li>
+        <li>hedgehog</li>
+        <li id="codeup">monkey</li>
+    </ul>
+</div>
+
+<p id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci doloremque impedit molestiae. A architecto eum exercitationem? A asperiores atque exercitationem, ipsa ipsum molestias nobis quibusdam sit ut vitae voluptate voluptates.</p>
+
+<p id="content1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci doloremque impedit molestiae. A architecto eum exercitationem? A asperiores atque exercitationem, ipsa ipsum molestias nobis quibusdam sit ut vitae voluptate voluptates.</p>
 <script src="js/j-query intro.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+<script>
+    $('h1').click(function (){
+            $(this).css('background-color', '#355E3B')
+        }
+    )
+
+    $('p').dblclick(function(){
+        $('p').css('font-size', '18px');
+    })
+
+    $('li').hover(function(){$('li').css('color', 'red')}, function(){$('li').css('color', 'black')});
+
+</script>
+
+
 </body>
 </html>
+
+
+

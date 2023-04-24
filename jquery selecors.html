@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+<h1 id="header">jQuery selector exercise</h1>
+<h1>Exercise complete</h1>
+<div>
+  <ul>
+    <li class="codeup">dog</li>
+    <li class="codeup">cat</li>
+    <li class="codeup">fish</li>
+    <li>hedgehog</li>
+    <li id="codeup">monkey</li>
+  </ul>
+</div>
+<p id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci doloremque impedit molestiae. A architecto eum exercitationem? A asperiores atque exercitationem, ipsa ipsum molestias nobis quibusdam sit ut vitae voluptate voluptates.</p>
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+<script>
+  $(function (){
+    alert("html loaded")
+    $("h1").css("background", "red")
+    $("p").css("background", "red")
+    $("li").css("background", "red")
+
+  })
+</script>
+</body>

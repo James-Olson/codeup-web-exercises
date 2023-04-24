@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1 id="header">header</h1>
+<!--<script src="1:1.html" type="text/javascript"></script>-->
+<script>
+    let dog = {
+        "breed": "great dane",
+        "name": "misty",
+        "bark": function (){
+            //there are two ways to grab an objects property if you are directly inside of it
+            //1. dog.name
+            console.log(dog.name + " barked")
+            //2. alternative is to use the this keyword
+            // ex: this.name
+            console.log(this.name + " barked")
+        }
+    }
+    dog.bark();
+
+    document.getElementById("header").addEventListener("click", function (){
+        this.innerHTML = "new text";
+    })
+    function getNum1(){
+        return Number(prompt("enter number 1"));
+
+    }
+
+    function getNum2(){
+        return Number(prompt("enter number 2"));
+    }
+
+    function add(num1, num2){
+        console.log(num1 + num2)
+    }
+
+    add(getNum1(), getNum2())
+</script>
+</body>
+</html>

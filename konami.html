@@ -6,21 +6,30 @@
 <body>
 <h1>Konami Code</h1>
 
-<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
-        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 <script>
     "use strict";
-    let contra= [38,38,40,40,37,39,37,39,66,65,13]
+
+    var konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+    var user = [];
+    var counter = 0;
+
 
     $(document).keyup(function(event){
-        // console.log(event.keyCode);
-        if(event.keyCode === contra[0,1,2,3,4,5,6,7,8,9,10]){
-            alert('You have 30 lives added')
-        } else {
-            alert('Wrong again')
-        }
-    });
+        console.log(event.keyCode);
+        user.push(event.keyCode);
 
+        if(konami[counter] !== user[counter] ){ //if the user input is incorrect
+            alert("not correct konami code!");
+        }
+        else if(konami[konami.length-1] === user[konami.length-1]){
+            alert("correct konami code - you get 30 lives!");
+        }
+        else{
+            counter++;
+        }
+
+    });
 </script>
 </body>
 </html>
