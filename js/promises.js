@@ -3,7 +3,7 @@
 function dateOfLastCommit(ghUsername) {
     return fetch(`https://api.github.com/users/${ghUsername}/events/public`, {
         headers: {
-            'Authorization': `token ${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}`
+            'Authorization': `token ${GITHUB}`
         }
     })
         .then(response => response.json())
