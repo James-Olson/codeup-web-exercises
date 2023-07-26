@@ -8,9 +8,8 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
-
-function sayhello(name){
-    return("hello" + name)
+function sayHello(name) {
+    return "Hello, " + name + ".";
 }
 
 /**
@@ -21,7 +20,8 @@ function sayhello(name){
  * console.log 'helloMessage' to check your work
  */
 
-var hellomessage = sayhello('jim')
+let helloMessage = sayHello("James");
+console.log(helloMessage);
 
 /**
  * TODO:
@@ -29,13 +29,13 @@ var hellomessage = sayhello('jim')
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
-var myname = 'jim'
-sayhello(myname)
+
+let myName = "James";
+console.log(sayHello(myName));
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
 var random = Math.floor((Math.random() * 3) + 1);
-
 
 /**
  * TODO:
@@ -54,10 +54,13 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-function istwo(x) {
+
+function isTwo(x) {
     return x === 2;
 }
-console.log(istwo(random));
+
+console.log(isTwo(random));
+
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -70,20 +73,22 @@ console.log(istwo(random));
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
-function calculateTip(x,y){
-    return (x * y);
+function calculateTip(tipPercentage, totalBill) {
+    let totalTip = totalBill * (.01*tipPercentage);
+    return totalTip;
 }
-console.log(calculateTip(x,y));
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+let totalBill = Number(prompt("How much was your bill?"));
+let tipPercentage = Number(prompt("What percentage would you like to tip?"));
 
-var bill = Number(prompt('bill amount'));
-var tip = Number(prompt('tip amount'));
-alert('tip is' + calculateTip(x,y).toFixed(2));
+alert("Your tip should be: $" + calculateTip(tipPercentage, totalBill));
+
 
 /**
  * TODO:
@@ -99,9 +104,14 @@ alert('tip is' + calculateTip(x,y).toFixed(2));
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
-function applydiscount(price,discount) {
-    let sum = price * discount;
-    return price - discountamount;
+
+function applyDiscount(originalPrice, discount) {
+    return originalPrice * (1-(.01*discount));
 }
-console.log(applydiscount(45.99, .12).tofixed(2));
+
+let inputPrice = Number(prompt("What is the current price?"));
+let inputDiscount = Number(prompt("What percentage is the discount?"));
+let discountedPrice = applyDiscount(inputPrice, inputDiscount);
+
+alert("The discounted price is: $" + discountedPrice);
 

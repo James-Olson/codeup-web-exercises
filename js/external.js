@@ -1,43 +1,36 @@
 "use strict";
 
-console.log("Hello from external JavaScript");
+console.log("Hello from external javascript.");
 
-alert('welcome to my website');
-prompt ('what is your favorite color');
-let x =  prompt("Whats your favorite color");
-alert( x + " is my favorite color also");
+alert("Welcome to my Website!");
 
-var littlemermaid = Number(prompt("how long did you rental the little mermaid"));
-var brotherbear = Number(prompt("how long did you rent the brother bear?"));
-var hercules = Number(prompt("how long did you have hercules"));
-var price = 3;
+let favColor = prompt("What is your favorite color?");
+alert(favColor + ", is my favorite color too!");
 
-var totalprice = (littlemermaid * price ) + (brotherbear * price) + (hercules * price);
-var grandprice = (littlemermaid + brotherbear + hercules) * price;
-var finalprice = (littlemermaid) + (brotherbear) + (hercules) * price;
-alert(totalprice + grandprice + finalprice);
+let dailyRental = Number(prompt("What is the cost to rent a movie for a day?"));
+let littleMermaid = Number(prompt("How many days did you rent Little Mermaid?"));
+let brotherBear = Number(prompt("How many days did you rent Brother Bear?"));
+let hercules = Number(prompt("How many days did you rent Hercules?"));
+alert("Your rental cost is a total of $" + (littleMermaid + brotherBear + hercules) * dailyRental);
 
-var googlepay = prompt("what does google pay");
-var amazonpay = prompt("what does amazon pay");
-var facebookpay = prompt("what does facebook pay");
-var googletime = prompt("how many hours did you give google");
-var amazontime = prompt("how many hours did you give amazon");
-var facebooktime = prompt("how many hours did facebook give you");
-var check = (googlepay * googletime) + (amazonpay * amazontime) +
-    (facebooktime * facebookpay);
-alert('check is' + check)
+let googlePay = Number(prompt("How much does Google pay you per hour?"));
+let amazonPay = Number(prompt("How much does Amazon pay you per hour?"));
+let facebookPay = Number(prompt("How much does Facebook pay you per hour?"));
+let googleHours = Number(prompt("How many hours did you work at Google?"));
+let amazonHours = Number(prompt("How many hours did you work at Amazon?"));
+let facebookHours = Number(prompt("How many hours did you work at Facebook?"));
+alert("Your total check should be $" + ((googlePay * googleHours) + (amazonPay * amazonHours) + (facebookPay * facebookHours)));
 
+let classStatus = confirm("Select 'OK' if the class is open");
+let scheduleStatus = confirm("Select 'OK' if the your schedule is open");
+let canEnroll = classStatus && scheduleStatus;
+alert("You are able to enroll into a new class: " + canEnroll);
 
-var full = confirm("is there room in class");
-var max = confirm("are you able to attend on time")
-alert(!full && !max);
-
-
-var bought = prompt("number bought");
-var normal = confirm("is offer still valid");
-var premium = confirm("do you have premium");
-
-alert ((bought) > 2 || premium) && !normal;
+let items = confirm("Select 'OK' if 2 or more items are being purchased");
+let offer = confirm("Select 'OK' if the offer has not expired");
+let membership =confirm("Select 'OK' if the customer is a Premium Member");
+let offerAvailability = membership || (items && offer);
+alert("Offer availability: " + offerAvailability);
 
 
 
