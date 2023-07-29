@@ -24,15 +24,15 @@
      * string, and <li> tags around each planet.
      */
 
-    //var goBr = planetsArray.join("<br>");
-    //console.log(goBr)
 
-var liString = ''
-    for(let x=1; x <= planetsArray.length; x++){
-        liString += "<li>" + planetsArray[x] + "</li>"
-    }
+    let planetsBreak = planetsArray.join('<br>');
+    console.log(planetsBreak);
 
-    console.log(liString)
+
+    let planetsList ="<ul><li>" + planetsArray.join("</li><li>") + "</li></ul>";
+    console.log(planetsList);
+
+    document.write(planetsList);
 
 
 

@@ -39,7 +39,7 @@ var languages = ["html", "css", "javascript", "java"];
 // TODO: replace the `var` keyword with `const`, then try to reassign a variable
 // declared as `const`
 const name = 'james';
-const email = 'email4number2@gmail.com';
+const email = 'email4numbe2@gmail.com';
 const languages = ["html", "css", "javascript", "java"];
 
 // TODO: rewrite the object literal using object property shorthand

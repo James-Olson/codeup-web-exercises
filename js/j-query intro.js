@@ -1,3 +1,5 @@
-$(function () {
-    alert('html has done loading');
-});
+function go () {
+    alert(' hello and welcome ');
+}
+
+go()
