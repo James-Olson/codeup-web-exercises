@@ -2,5 +2,5 @@
 
 
 ```bash
-practicing javascript, deployment, design and more
+practicing HTML, CSS, Javascript, deployment, design and more
 ```
